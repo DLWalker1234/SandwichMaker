@@ -5,7 +5,11 @@ var finalSandwichPrice = 0;
 var selectedTopping;
 
 // Get a reference to the <select> element that has all the meat options
-var meatChooser = document.getElementById("meat-chooser");
+var breadChooser = document.getElementById("breads");
+var meatChooserooser = document.getElementById("meats");
+var cheeseChooser = document.getElementById("cheese");
+var condimentsChooser = document.getElementById("condiments");
+var veggieChooser = document.getElementById("veggie");
 
 /* 
   A <select> element broadcasts a change event, so you listen for it

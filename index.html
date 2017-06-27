@@ -7,29 +7,42 @@
 </head>
 <body>
 	<h1>Sandwich-Maker</h1>
-	<div id="form">
-		<p>Wheat</p>
-		<textarea id="wheat"></textarea>
-  		<p>Italian</p>
-  		<textarea id="italian"></textarea>
-  		<p>Roast Beef</p>
-  		<textarea id="roast-beef"></textarea>
-  		<p>Turkey</p>
-  		<textarea id="turkey"></textarea>
-  		<p>Swiss</p>
-  		<textarea id="swiss"></textarea>
-  		<p>Pepper Jack</p>
-  		<textarea id="pepper-jack"></textarea>
-  		<p>Mustard</p>
-  		<textarea id="mustard"></textarea>
-  		<p>Mayo</p>
-  		<textarea id="mayo"></textarea>
-  		<p>Lettuce</p>
-  		<textarea id="lettuce"></textarea>
-  		<p>Tomatoes</p>
-  		<textarea id="tomatoes"></textarea>
-  		<button id="submitBtn">Submit</button>
-	</div>
+	
+	<h2>Bread Options:</h2>
+		<div  id="breads"> 
+			<button id="WheatBtn">Wheat</button>
+			<button id="ItalianBtn"> Italian </button>
+			<button id="PumpernickelBtn"> pumpernickel </button>
+		</div>
+	<h2>Meat Options:</h2>
+		<div id="meats">
+			<button  id="RoastBeefBtn">Roast Beef</button>
+			<button  id="HamBtn">Ham</button>
+			<button  id="TurkeyBtn">Turkey </button>	
+		</div>
+	<h2>Cheese Options:</h2>
+		<div id="cheeses">
+			<button id="SwissBtn">Swiss</button>
+			<button id="PepperJackBtn">Pepper Jack</button>
+			<button id="MozerellaBtn">Mozerella</button>
+		</div>
+
+	<h2>Condiments Options:</h2>
+		<div id="condiments">
+			<button id="MustardBtn"> Mustard </button>
+			<button id="MayoBtn"> Mayo </button>
+			<button id="DressingBtn"> Dressing </button>
+		</div>
+
+	<h2>Veggie Options:</h2>
+		<div id="veggies">
+			<button  id="TomatoBtn"> Tomato </button>
+			<button  id="PickleBtn"> Pickle </button>
+			<button id="LettuceBtn"> Lettuce </button>	
+		</div>
+
+
+
 	<div id="final">
 	<p id="sandwich"><b>Your Final Sandwich:</b></p>
 	<p id="total"><b>Total: </b></p>
@@ -41,6 +54,13 @@
 
 
 
-	<!-- <script src="SandwichMaker.js"></script> -->
+	
+	<script src="javascripts/bread.js"></script>
+	<script src="javascripts/meat.js"></script>
+	<script src="javascripts/cheese.js"></script>
+	<script src="javascripts/condiments.js"></script>
+	<script src="javascripts/veggies.js"></script>
+	<script src="javascripts/DOMhandler.js"></script>
+	<script src="javascripts/SandwichMaker.js"></script>
 </body>
 </html>
