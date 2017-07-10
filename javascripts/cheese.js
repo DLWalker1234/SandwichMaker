@@ -2,10 +2,11 @@ console.log("CHEESE");
 
 var SandwichMaker = (function(maker) {
   
-  var cheesePrices= {"Swiss": 1.00, 
-                    "PepperJack": 2.00, 
-                    "Mozerelaa": 3.00
-                  };
+  var cheesePrices= {
+                      "Swiss": 1.00, 
+                      "PepperJack": 2.00, 
+                      "Mozerelaa": 3.00
+                    };
 
   //Setter?
   maker.addCheesePrices = function(cheese) {
@@ -18,4 +19,4 @@ var SandwichMaker = (function(maker) {
 
  
   return maker;
-})(SandwichMaker);
+})(SandwichMaker || {});

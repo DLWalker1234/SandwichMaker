@@ -7,13 +7,13 @@ var SandwichMaker = (function(maker) {
 						"Lettuce": 3.00};
 
 	//setter					
-	maker.addVeggiePrices = function(veggie) {
-		return veggiePrices[veggie];
+	maker.addVeggie = function(veggie) {
+		return veggiePrices[selectedVeggie];
 	};
 	//getter
-	maker.getVeggiePrices = function() {
+	maker.getVeggie = function() {
 		return veggiePricea	
 	};
 
 	return maker;
-})(SandwichMaker);
+})(SandwichMaker || {});

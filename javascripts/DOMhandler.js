@@ -1,25 +1,37 @@
-// Variable to hold the final price. Default to 0.
-var finalSandwichPrice = 0;
+console.log("DOM");
 
-// Variable to hold topping that the user selects
-var selectedTopping;
 
-// Get a reference to the <select> element that has all the meat options
-var breadChooser = document.getElementById("breads");
-var meatChooserooser = document.getElementById("meats");
-var cheeseChooser = document.getElementById("cheese");
-var condimentsChooser = document.getElementById("condiments");
-var veggieChooser = document.getElementById("veggie");
+var finalSandwichPrice = 0;   
+var selectedTopping;          
 
-/* 
-  A <select> element broadcasts a change event, so you listen for it
-  and get the value of the topping from your augmented IIFE
-*/
-meatChooser.addEventListener("change", function(event) {
-  // Get the value chosen from the DOM
+
+var breadChooser = document.getElementById("breads"),
+    meatChooser = document.getElementById("meats"),
+    cheeseChooser = document.getElementById("cheeses"),
+    condimentChooser = document.getElementById("condiments"),
+    veggieChooser = document.getElementById("veggies"),
+    sandwich = document.getElementById("finalSandwich");  
+
+var addWheat = document.getElementById("WheatBtn"),
+    addItalian = document.getElementById("ItalianBtn"),
+    addPump = document.getElementById("PumpernickelBtn");
+
+
+// breadChooser.addEventListener("click", function(event) {
+//   selectedTopping = event.target.value;
+//   console.log(selectedTopping)
+//   if(selectedTopping === addWheat) {
+//     console.log("wheat bitch")
+//   }
+
+// });
+
+addWheat.addEventListener("click", function(event) {
+  console.log("meatified")
   selectedTopping = event.target.value;
 
-  // Determine the price of the topping chosen
-
-  // Add the topping to the SandwichMaker to increase the total price
-});
+  let breads = SandwichMaker.getBreadPrices();
+  finalSandwichPrice += breads; 
+})
+  
+ 

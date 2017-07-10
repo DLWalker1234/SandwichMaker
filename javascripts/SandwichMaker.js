@@ -28,15 +28,16 @@
 // that handles interacting with the form elements and determining 
 // which method should be called.
 
+
 var SandwichMaker = (function() {
+var totalPrice = 0;    
 
-  // Private variable to store the price
-  var totalPrice = 0;
-
-  // Return the public interface that other code can interact with
+  
   return {
     addTopping: function(toppingPrice) {
-      totalPrice += toppingPrice;
+      	totalPrice += toppingPrice;
+		sandwich.innerHTML = totalPrice; 
+      	console.log(totalPrice);
     }
   };
-})();
+})(SandwichMaker || {});

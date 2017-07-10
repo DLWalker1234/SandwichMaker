@@ -2,9 +2,11 @@ console.log("CONDIMENTS");
 
 var SandwichMaker = (function(maker) {
 
-	var condimentsPrices = {"Mustard": 1.00,
+	var condimentsPrices = {
+							"Mustard": 1.00,
 							"Mayo": 2.00,
-							"Dressing": 3.00};
+							"Dressing": 3.00
+							};
 
 	//setter
 	maker.addCondimentsPrices = function(condiment) {
@@ -16,4 +18,4 @@ var SandwichMaker = (function(maker) {
 	};
 
 	return maker;
-})(SandwichMaker);
+})(SandwichMaker || {});
