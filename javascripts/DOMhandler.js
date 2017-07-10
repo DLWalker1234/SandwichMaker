@@ -9,8 +9,10 @@ var breadChooser = document.getElementById("breads"),
     meatChooser = document.getElementById("meats"),
     cheeseChooser = document.getElementById("cheeses"),
     condimentChooser = document.getElementById("condiments"),
-    veggieChooser = document.getElementById("veggies"),
-    sandwich = document.getElementById("finalSandwich");  
+    veggieChooser = document.getElementById("veggies");
+
+var sandwich = document.getElementById("sandwich");
+var moneyTotal = document.getElementById("total");  
 
 var addWheat = document.getElementById("WheatBtn"),
     addItalian = document.getElementById("ItalianBtn"),
@@ -27,11 +29,34 @@ var addWheat = document.getElementById("WheatBtn"),
 // });
 
 addWheat.addEventListener("click", function(event) {
-  console.log("meatified")
   selectedTopping = event.target.value;
+  console.log(selectedTopping)
+  var wheats = 0;
 
-  let breads = SandwichMaker.getBreadPrices();
-  finalSandwichPrice += breads; 
-})
+  let breads = SandwichMaker.getBreadPrices("Wheat");
+  console.log(breads)
+  finalSandwichPrice += breads;
+  console.log(finalSandwichPrice);
+
+  sandwich.innerHTML = selectedTopping;
+  moneyTotal.innerHTML += finalSandwichPrice;
+});
+
+addItalian.addEventListener("click", function(event) {
+  selectedTopping = event.target.value;
+  console.log(selectedTopping);
+
+  let breads = SandwichMaker.getBreadPrices("Italian");
+  console.log(breads)
+  finalSandwichPrice += breads;
+  console.log(finalSandwichPrice);
+
+  sandwich.innerHTML = selectedTopping;
+  moneyTotal.innerHTML += finalSandwichPrice;
+});
+
+
+
+
   
  

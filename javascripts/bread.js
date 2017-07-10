@@ -13,8 +13,8 @@ var SandwichMaker = (function(maker) {
     return breadPrices[bread];
   };
   //getter
-  maker.getBreadPrices = function () {
-    return breadPrices
+  maker.getBreadPrices = function (bread) {
+    return breadPrices[bread]
   };
 
   return maker;
