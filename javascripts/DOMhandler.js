@@ -9,7 +9,8 @@ var moneyTotal = document.getElementById("total");
 
 var addWheat = document.getElementById("WheatBtn"),
     addItalian = document.getElementById("ItalianBtn"),
-    addPump = document.getElementById("PumpernickelBtn");
+    addPump = document.getElementById("PumpernickelBtn"),
+    addRoast = document.getElementById("RoastBeefBtn");
 
 var wheats = 0,
     Italian = 0,
@@ -58,8 +59,28 @@ addItalian.addEventListener("click", function(event) {
   console.log(finalSandwichPrice);
 
   sandwich.innerHTML = selectedTopping;
-  moneyTotal.innerHTML += finalSandwichPrice;
+  moneyTotal.innerHTML = finalSandwichPrice;
 });
+
+addPump.addEventListener("click", function(event) {
+  selectedTopping = event.target.value;
+
+  let breads = SandwichMaker.getBreadPrices("Pumpernickel");
+  finalSandwichPrice += breads;
+
+  sandwich.innerHTML = selectedTopping;
+  moneyTotal.innerHTML = finalSandwichPrice;
+});
+
+addRoast.addEventListener("click", function(event) {
+  selectedTopping = event.target.value;
+
+  let breads = SandwichMaker.getBreadPrices("Roast-Beef");
+  finalSandwichPrice += breads;
+
+  sandwich.innerHTML = selectedTopping;
+  moneyTotal.innerHTML = finalSandwichPrice;
+})
 
 
 
